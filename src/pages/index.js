@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import styled, { injectGlobal } from 'styled-components';
 import Main from '../components/Main';
 
@@ -37,7 +38,14 @@ class IndexPage extends React.Component {
   };
 
   render() {
-    return <Main seconds={this.state.seconds} />;
+    return (
+      <div>
+        <Helmet>
+          <title>We're coming home!</title>
+        </Helmet>
+        <Main seconds={this.state.seconds} />
+      </div>
+    );
   }
 }
 
