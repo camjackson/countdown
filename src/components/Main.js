@@ -5,31 +5,36 @@ const Column = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin: 0;
+  height: 100%;
+  justify-content: space-around;
 `;
 
 const SolidText = styled.p`
-  margin: 5px;
+  margin: 0;
   font-size: 40px;
   font-family: sans-serif;
 `;
 const CurvyText = styled.p`
-  margin: 5px;
+  margin: 0;
   font-size: 32px;
   font-style: italic;
   font-family: cursive;
 `;
 const BigCurvyText = CurvyText.extend`
-  margin: 40px;
+  margin: 0;
   font-size: 50px;
 `;
 const Fade = styled.span`
   color: #938a8a;
 `;
 
+const format = (n, precision) =>
+  n.toLocaleString(undefined, { maximumFractionDigits: precision });
+
 const Figure = ({ n, unit, precision = 0 }) => (
   <SolidText>
-    {n.toFixed(precision)} <Fade>{unit}</Fade>
+    {format(n, precision)} <Fade>{unit}</Fade>
   </SolidText>
 );
 const Or = () => (
