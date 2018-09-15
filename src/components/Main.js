@@ -6,7 +6,7 @@ const Column = styled.main`
   flex-direction: column;
   align-items: center;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   justify-content: space-around;
 `;
 
