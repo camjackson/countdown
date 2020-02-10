@@ -64,7 +64,7 @@ const Main = ({ seconds }) => {
       <Figure n={weeks} unit="weeks" precision={2} />
       <Or />
       <Figure n={months} unit="months" precision={2} />
-      <BigCurvyText>until we go home!</BigCurvyText>
+      <BigCurvyText>until we move in!</BigCurvyText>
       <SolidText>^_^</SolidText>
     </Column>
   );
